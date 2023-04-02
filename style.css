@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+    width: 1440px;
+    max-width: 1440px;
+    height: 100vmax;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    background:  hsl(233, 11%, 84%);
+}
+
+.container.darkmode {
+    background:  hsl(235, 21%, 11%);
+}
+
+@media (max-width:375px) {
+
+    .container {
+        width: 375px;
+        max-width: 375px;
+        height: 200vh;
+    }
+
+}
+/* first section backgrounds and shit*/
+
+.page-header {
+    position: relative;
+}
+
+
+#dxt-light-bg {
+    display: block;
+}
+
+#dxt-dark-bg {
+    display:none;
+}
+
+.container.darkmode #dxt-dark-bg {
+    display:block;
+}
+
+.container.darkmode #dxt-light-bg {
+    display:none;
+}
+
+.for-mobile {
+    display: none;
+}
+
+
+
+
+#todo-text {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    color:hsl(0, 0%, 98%);
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+
+#darkmode {
+    display: block;
+    position: absolute;
+    top: 37%;
+    right: 30%;
+}
+
+#lightmode {
+    position: absolute;
+    top: 37%;
+    right: 30%;
+    display: none; 
+}
+
+.container.darkmode #darkmode {
+    display: none;
+}
+
+.container.darkmode #lightmode {
+    display: block;
+}
+
+@media (max-width:375px) {
+
+    .for-destop {
+        display: none;
+    }
+
+    .for-mobile {
+        display: block;
+    }
+
+    #mob-light-bg {
+        display: block;
+    }
+    
+    #mob-dark-bg {
+        display:none;
+    }
+    
+    .container.darkmode #mob-dark-bg {
+        display:block;
+    }
+    
+    .container.darkmode #mob-light-bg {
+        display:none;
+    }
+    
+
+    #todo-text {
+        top: 15%;
+        left: 5%;
+        font-size: 30px;
+    }
+
+    #darkmode {
+        display: block;
+        position: absolute;
+        top: 17%;
+        right: 5%;
+    }
+    
+    #lightmode {
+        position: absolute;
+        top: 17%;
+        right: 5%;
+        display: none; 
+    }
+    
+}
+
+/* second section*/
+
+
+
+.page-content {
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 180px;
+    left: 30%;
+    right: 30%;
+}
+
+
+
+.task {
+    position: relative;
+}
+
+.task::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(233, 11%, 84%);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+}
+
+
+#new-task {
+    width: 100%;
+    height: 60px;
+    background: hsl(0, 0%, 98%);
+    color: hsl(235, 19%, 35%);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-indent: 13%;
+    font-size: 15px;
+}
+
+.container.darkmode #new-task {
+    background: hsl(235, 21%, 11%);
+}
+
+@media (max-width:375px) {
+    .page-content {
+        top: 100px;
+        left: 5%;
+        right: 5%;
+    }
+    
+    
+    #new-task {
+        text-indent: 20%;
+        font-size: 13px;
+    }
+
+    .container.darkmode #new-task {
+        background: hsl(235, 21%, 11%);
+    }
+
+}
+
+.task-added {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: auto; 
+}
+
+.task-box {
+    display: flex;
+    width:100%;
+    height: auto;
+    background: hsl(0, 0%, 98%);
+    padding: 20px 30px;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+}
+
+.container.darkmode .task-box {
+    background: hsl(235, 24%, 19%);
+    border-bottom: 1px solid hsl(235, 19%, 35%);
+}
+
+.task-box:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+#check-box {
+    position: relative;
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
+}
+
+#check-box::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(233, 11%, 84%);
+    border-radius: 50%;  
+}
+
+.check-icon {
+    display: none;
+}
+
+.task-box.complete .check-icon {
+    background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    width: 22px;
+    height: 22px;
+    display: block;
+    border-radius: 100%;
+    padding: 5px;
+
+}
+
+#task-dts {
+    text-indent: 18px;
+    color: hsl(235, 19%, 35%);
+
+}
+
+#task-dts::first-letter {
+    text-transform: capitalize;
+}
+
+.task-box.complete #task-dts {
+    text-decoration: line-through;
+    color: hsl(233, 11%, 84%);
+}
+
+.deletebtn {
+    display: none;
+}
+
+@media (max-width:375px) {
+    .task-added {
+        margin-top: 7px;
+    }
+
+    .task-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #task-dts {
+        text-indent: -100px;
+    }
+
+    .deletebtn {
+        width: 12px;
+        height: 12px;
+        display: block;
+    }
+}
+
+
+.filter-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: hsl(0, 0%, 98%);
+    padding: 20px  30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.container.darkmode .filter-container {
+    background: hsl(235, 24%, 19%);
+}
+
+
+.filter-tab {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-tab.destop div {
+    color: hsl(235, 24%, 19%);
+}
+
+.container.darkmode .filter-tab div {
+    color: hsl(235, 19%, 35%);
+}
+
+#filter-items-dxt {
+    display: flex;
+}
+
+#filter-items-dxt div {
+    cursor: pointer;
+}
+
+#filter-items-dxt div:not(:last-child) {
+    margin-right: 15px;
+}
+
+#filter-items-dxt div:hover {
+    color:hsl(220, 98%, 61%);
+}
+
+#filter-items div:hover {
+    color:hsl(220, 98%, 61%);
+}
+
+#clear-completed:hover {
+    color: hsl(220, 98%, 61%);
+}
+
+
+@media (max-width:375px) {
+
+    .filter-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: hsl(0, 0%, 98%);
+        padding: 20px  30px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    
+    
+    .filter-tab {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
+    #filter-items-dxt {
+        display: flex;
+        position: absolute;
+        top: 100px;
+        background: hsl(0, 0%, 98%) ;
+        padding: 20px 30px;
+        border-radius: 5px;
+    }
+
+    .container.darkmode    #filter-items-dxt {
+        background: hsl(235, 24%, 19%) ;
+    }
+    
+    #filter-items-dxt div {
+        cursor: pointer;
+    }
+    
+    #filter-items-dxt div:not(:last-child) {
+        margin-right: 40px;
+    }
+
+}

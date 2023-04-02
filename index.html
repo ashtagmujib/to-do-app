@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Todo app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <section class="page-header">
+      <div class="for-destop">
+        <img id="dxt-light-bg" src="/images/bg-desktop-light.jpg" alt="light mode background">
+        <img id="dxt-dark-bg" src="/images/bg-desktop-dark.jpg" alt="dark mode background">
+      </div>
+
+      <div class="for-mobile">
+        <img id="mob-light-bg" src="/images/bg-mobile-light.jpg" alt="light mode background">
+        <img id="mob-dark-bg" src="/images/bg-mobile-dark.jpg" alt="dark mode background">
+      </div>
+
+      <div class="todo">
+        <h1 id="todo-text"> Todo </h1>
+        <img id="darkmode" src="/images/icon-moon.svg" alt="darkmode">
+        <img id="lightmode" src="/images/icon-sun.svg" alt="lightmode">
+      </div>
+
+    </section>
+
+    <section class="page-content">
+      <div class="task">
+        <input id="new-task" type="text" placeholder="Create a new todo">
+
+        <div class="task-added">
+
+        </div>
+      
+      </div>
+
+      <div class="filter-container">
+        <div class="filter-tab">
+          <div id="all-items"> 0 items left </div>
+          <div id="filter-items-dxt" >
+            <div id="all">All</div>
+            <div id="active">Active</div>
+            <div id="completed">Completed</div>
+          </div>
+          <div id="clear-completed"> Clear Completed</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+
+ 
+
+  <div class="attribution">
+    by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abdul-Mujib</a>.
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
