@@ -34,7 +34,7 @@ newTask.addEventListener('keydown', (e) => {
 
         let checkIcon = document.createElement('img');
         checkIcon.classList = 'check-icon';
-        checkIcon.src = '/images/icon-check.svg';
+        checkIcon.src = './images/icon-check.svg';
         checkBox.appendChild(checkIcon);
 
         let taskDts = document.createElement('p');
@@ -43,7 +43,7 @@ newTask.addEventListener('keydown', (e) => {
 
         let deleteBtn = document.createElement('img');
         deleteBtn.classList = 'deletebtn';
-        deleteBtn.src = '/images/icon-cross.svg';
+        deleteBtn.src = './images/icon-cross.svg';
 
         // append elements
         if(newTask != '') {
